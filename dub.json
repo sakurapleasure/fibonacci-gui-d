@@ -1,0 +1,12 @@
+{
+	"name": "fibonacci-gui-d",
+	"authors": [
+		"Reiju"
+	],
+	"dependencies": {
+		"dlangui": "~>0.9.47"
+	},
+	"description": "A GUI application for calculating fibonacci numbers.",
+	"copyright": "Copyright © 2017, Reiju",
+	"license": "MIT"
+}
