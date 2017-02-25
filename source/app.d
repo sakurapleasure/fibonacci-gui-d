@@ -56,12 +56,20 @@ extern (C) int UIAppMain(string[] args) {
 	auto textList = layout.childById("textList");
 
 	btnCalc.click = delegate(Widget src) {
+		scope(failure) {
+			window.showMessageBox("Error"d, "Input is not suitable"d);
+			return false;
+		}
 		int num = to!int(editNum.text);
 		writeln(num);
 		textResult.text = to!dstring(fibonacci.fibonacci(to!int(editNum.text)));
 		return true;
 	};
 	btnCalcMultiple.click = delegate(Widget src) {
+		scope(failure) {
+			window.showMessageBox("Error"d, "Input is not suitable"d);
+			return false;
+		}
 		int n = to!int(editFirstNum.text);
 		int k = to!int(editSecondNum.text);
 		BigInt[] result = fibonacci.fibonacciList(n, k);
